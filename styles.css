@@ -16,7 +16,6 @@ body {
   height: calc(100vh - 100px);
 }
 
-/* left */
 .container .left {
   width: 50%;
   padding: 10px 100px 0 100px;
@@ -130,7 +129,6 @@ body {
   background-color: #6b7280;
 }
 
-/* right */
 .container .right {
   background-position: 45% 40%;
   background-image: url('./assets/photo.jpg');
@@ -141,16 +139,100 @@ body {
 }
 
 /* media query */
-/* @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 320px) {
+  .left .body-parent {
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container .left {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .left .navbar .hamburger {
+    display: block;
+  }
+
+  .left .navbar .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .left .navbar .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .left .navbar .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .container .left .navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+  }
+
+  .container .left .navbar .navMenu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #e5edff;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .container .left .navbar .navMenu li {
+    margin: 10px 0;
+  }
+
+  .container .left .navbar .navMenu li a {
+    color: #6b7280;
+    display: block;
+  }
+
+  .container .left .navbar .navMenu li a.active {
+    color: #0058ff;
+  }
+
+  .container .left .navbar .navMenu.active {
+    left: 0;
+  }
+
   .container .right,
-  .navbar ul {
+  .navbar ul li a {
     display: none;
   }
-} */
 
-/* landscape */
-@media (device-height: 320px) and (device-width: 480px),
-  (device-height: 375px) and (device-width: 667px) {
+  .left .body-parent .title span:first-child {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .left .body-parent .title span:last-child {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .left .body-parent .text-body p {
+    font-size: 1rem;
+  }
+
+  .left .body-parent .button-parent button:first-child {
+    padding: 16px 24px;
+    font-size: 1rem;
+  }
+
+  .left .body-parent .button-parent button:last-child {
+    padding: 16px 24px;
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
   .container .left {
     width: 100%;
     padding: 10px;
@@ -213,12 +295,7 @@ body {
   }
 
   .left .body-parent {
-    margin-top: 30px;
-  }
-
-  .left .body-parent .title,
-  .left .body-parent .text-body {
-    margin-bottom: 30px;
+    margin-top: 0;
   }
 
   .left .body-parent .title span:first-child {
@@ -246,242 +323,14 @@ body {
   }
 }
 
-@media (device-height: 414px) and (device-width: 896px),
-  (device-height: 390px) and (device-width: 844px),
-  (device-height: 393px) and (device-width: 851px),
-  (device-height: 412px) and (device-width: 914px),
-  (device-height: 412px) and (device-width: 915px) {
+@media only screen and (min-width: 768px) and (max-width: 991px) {
   .container .left {
-    padding: 10px 50px;
-  }
-
-  .left .body-parent {
-    margin-top: 30px !important;
-  }
-
-  .left .body-parent .title,
-  .left .body-parent .text-body {
-    margin-bottom: 30px;
-  }
-
-  .left .body-parent .title span:first-child {
-    font-size: 40px !important;
-    line-height: 40px !important;
-  }
-
-  .left .body-parent .title span:last-child {
-    font-size: 40px !important;
-    line-height: 40px !important;
-  }
-
-  .left .body-parent .text-body p {
-    font-size: 1rem;
-  }
-
-  .left .body-parent .button-parent button:first-child {
-    padding: 12px 16px;
-    font-size: 1rem;
-  }
-
-  .left .body-parent .button-parent button:last-child {
-    padding: 12px 16px;
-    font-size: 1rem;
-  }
-}
-
-@media (device-height: 360px) and (device-width: 740px),
-  (device-height: 412px) and (device-width: 915px),
-  (device-height: 540px) and (device-width: 720px) {
-  .left .navbar ul {
-    left: 120px !important;
-    gap: 30px;
-  }
-
-  .container .left {
-    padding: 10px 20px;
-  }
-
-  .left .body-parent {
-    margin-top: 20px;
-  }
-
-  .left .body-parent .title,
-  .left .body-parent .text-body {
-    margin-bottom: 30px;
-  }
-
-  .left .body-parent .title span:first-child {
-    font-size: 40px;
-    line-height: 40px;
-  }
-
-  .left .body-parent .title span:last-child {
-    font-size: 40px;
-    line-height: 40px;
-  }
-
-  .left .body-parent .text-body p {
-    font-size: 1rem;
-  }
-
-  .left .body-parent .button-parent button:first-child {
-    padding: 16px 24px;
-    font-size: 1rem;
-  }
-
-  .left .body-parent .button-parent button:last-child {
-    padding: 16px 24px;
-    font-size: 1rem;
-  }
-}
-
-@media (device-height: 600px) and (device-width: 1024px) {
-  .left .navbar ul {
-    left: 150px;
-    gap: 30px;
-  }
-
-  .container .left {
-    padding: 10px 20px;
-  }
-
-  .left .body-parent {
-    margin-top: 20px;
-  }
-
-  .left .body-parent .title,
-  .left .body-parent .text-body {
-    margin-bottom: 30px;
-  }
-
-  .left .body-parent .title span:first-child {
-    font-size: 50px !important;
-    line-height: 50px !important;
-  }
-
-  .left .body-parent .title span:last-child {
-    font-size: 50px !important;
-    line-height: 50px !important;
-  }
-
-  .left .body-parent .text-body p {
-    font-size: 1rem;
-  }
-
-  .left .body-parent .button-parent button:first-child {
-    padding: 16px 24px;
-    font-size: 1rem;
-  }
-
-  .left .body-parent .button-parent button:last-child {
-    padding: 16px 24px;
-    font-size: 1rem;
-  }
-}
-
-@media (device-height: 800px) and (device-width: 1280px) {
-  .left .navbar ul {
-    left: 150px;
-    gap: 30px;
-  }
-
-  .container .left {
-    padding: 10px 50px;
-  }
-
-  /* .left .body-parent {
-    margin-top: 20px;
-  } */
-
-  .left .body-parent .title,
-  .left .body-parent .text-body {
-    margin-bottom: 30px;
-  }
-
-  .left .body-parent .title span:first-child {
-    font-size: 80px;
-    line-height: 80px;
-  }
-
-  .left .body-parent .title span:last-child {
-    font-size: 80px;
-    line-height: 80px;
-  }
-
-  .left .body-parent .text-body p {
-    font-size: 1rem;
-  }
-
-  .left .body-parent .button-parent button:first-child {
-    padding: 16px 24px;
-    font-size: 1rem;
-  }
-
-  .left .body-parent .button-parent button:last-child {
-    padding: 16px 24px;
-    font-size: 1rem;
-  }
-}
-
-/* ipad mini landscape */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
-  .left .navbar ul {
-    left: 150px;
-    gap: 50px;
-  }
-
-  .container .left {
-    padding: 10px 50px;
-  }
-
-  .left .body-parent {
-    margin-top: -50px;
-  }
-
-  .left .body-parent .title,
-  .left .body-parent .text-body {
-    margin-bottom: 30px;
-  }
-
-  .left .body-parent .title span:first-child {
-    font-size: 80px;
-    line-height: 80px;
-  }
-
-  .left .body-parent .title span:last-child {
-    font-size: 80px;
-    line-height: 80px;
-  }
-
-  .left .body-parent .text-body p {
-    font-size: 1rem;
-  }
-
-  .left .body-parent .button-parent button:first-child {
-    padding: 16px 24px;
-    font-size: 1rem;
-  }
-
-  .left .body-parent .button-parent button:last-child {
-    padding: 16px 24px;
-    font-size: 1rem;
-  }
-}
-
-@media (device-height: 280px) and (device-width: 653px) {
-  .container .left {
-    width: 100%;
-    padding: 10px;
-  }
-
-  .left .navbar {
-    display: flex;
-    justify-content: space-between;
-    height: 50px;
+    width: 50%;
+    padding: 20px;
   }
 
   .left .navbar .hamburger {
-    display: block;
+    display: none;
   }
 
   .left .navbar .hamburger.active .bar:nth-child(2) {
@@ -496,16 +345,10 @@ body {
     transform: translateY(-8px) rotate(-45deg);
   }
 
-  .container .left .navbar .navMenu {
-    position: fixed;
-    left: -100%;
-    top: 70px;
-    gap: 0;
-    flex-direction: column;
-    background-color: #e5edff;
-    width: 100%;
-    text-align: center;
-    transition: 0.3s;
+  .container .left .navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
   }
 
   .container .left .navbar .navMenu li {
@@ -521,22 +364,13 @@ body {
     color: #0058ff;
   }
 
-  .container .left .navbar .navMenu.active {
-    left: 0;
-  }
-
   .container .right,
   .navbar ul li a {
     display: none;
   }
 
   .left .body-parent {
-    margin-top: 30px;
-  }
-
-  .left .body-parent .title,
-  .left .body-parent .text-body {
-    margin-bottom: 30px;
+    margin-top: -30px;
   }
 
   .left .body-parent .title span:first-child {
@@ -562,18 +396,21 @@ body {
     padding: 16px 24px;
     font-size: 1rem;
   }
+
+  .container .right {
+    width: 50%;
+    display: block;
+  }
 }
 
-/* portrait */
-
-@media (device-height: 480px) and (device-width: 320px) {
+@media only screen and (min-width: 992px) {
   .container .left {
-    width: 100%;
-    padding: 10px;
+    width: 50%;
+    padding: 10px 100px 0 100px;
   }
 
   .left .navbar .hamburger {
-    display: block;
+    display: none;
   }
 
   .left .navbar .hamburger.active .bar:nth-child(2) {
@@ -588,22 +425,10 @@ body {
     transform: translateY(-8px) rotate(-45deg);
   }
 
-  .left .navbar {
+  .container .left .navbar {
     display: flex;
     justify-content: space-between;
     height: 50px;
-  }
-
-  .container .left .navbar .navMenu {
-    position: fixed;
-    left: -100%;
-    top: 70px;
-    gap: 0;
-    flex-direction: column;
-    background-color: #e5edff;
-    width: 100%;
-    text-align: center;
-    transition: 0.3s;
   }
 
   .container .left .navbar .navMenu li {
@@ -619,32 +444,23 @@ body {
     color: #0058ff;
   }
 
-  .container .left .navbar .navMenu.active {
-    left: 0;
-  }
-
   .container .right,
   .navbar ul li a {
     display: none;
   }
 
   .left .body-parent {
-    margin-top: 30px;
-  }
-
-  .left .body-parent .title,
-  .left .body-parent .text-body {
-    margin-bottom: 30px;
+    margin-top: -30px;
   }
 
   .left .body-parent .title span:first-child {
-    font-size: 40px;
-    line-height: 40px;
+    font-size: 60px;
+    line-height: 60px;
   }
 
   .left .body-parent .title span:last-child {
-    font-size: 40px;
-    line-height: 40px;
+    font-size: 60px;
+    line-height: 60px;
   }
 
   .left .body-parent .text-body p {
@@ -652,292 +468,17 @@ body {
   }
 
   .left .body-parent .button-parent button:first-child {
-    padding: 12px 16px;
+    padding: 16px 16px;
     font-size: 1rem;
   }
 
   .left .body-parent .button-parent button:last-child {
-    padding: 12px 16px;
+    padding: 16px 16px;
     font-size: 1rem;
   }
-}
 
-@media (device-height: 667px) and (device-width: 375px),
-  (device-height: 896px) and (device-width: 414px),
-  (device-height: 844px) and (device-width: 390px),
-  (device-height: 851px) and (device-width: 393px),
-  (device-height: 740px) and (device-width: 360px),
-  (device-height: 915px) and (device-width: 412px),
-  (device-height: 720px) and (device-width: 540px),
-  (device-height: 914px) and (device-width: 412px) {
-  .container .left {
-    width: 100%;
-    padding: 10px;
-  }
-
-  .left .navbar {
-    display: flex;
-    justify-content: space-between;
-    height: 50px;
-  }
-
-  .left .navbar .hamburger {
+  .container .right {
+    width: 50%;
     display: block;
-  }
-
-  .left .navbar .hamburger.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .left .navbar .hamburger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  .left .navbar .hamburger.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-
-  .container .left .navbar .navMenu {
-    position: fixed;
-    left: -100%;
-    top: 70px;
-    gap: 0;
-    flex-direction: column;
-    background-color: #e5edff;
-    width: 100%;
-    text-align: center;
-    transition: 0.3s;
-  }
-
-  .container .left .navbar .navMenu li {
-    margin: 10px 0;
-  }
-
-  .container .left .navbar .navMenu li a {
-    color: #6b7280;
-    display: block;
-  }
-
-  .container .left .navbar .navMenu li a.active {
-    color: #0058ff;
-  }
-
-  .container .left .navbar .navMenu.active {
-    left: 0;
-  }
-
-  .container .right,
-  .navbar ul li a {
-    display: none;
-  }
-
-  .left .body-parent .title,
-  .left .body-parent .text-body {
-    margin-bottom: 30px;
-  }
-
-  .left .body-parent .title span:first-child {
-    font-size: 40px;
-    line-height: 40px;
-  }
-
-  .left .body-parent .title span:last-child {
-    font-size: 40px;
-    line-height: 40px;
-  }
-
-  .left .body-parent .text-body p {
-    font-size: 1rem;
-  }
-
-  .left .body-parent .button-parent button:first-child {
-    padding: 12px 16px;
-    font-size: 1rem;
-  }
-
-  .left .body-parent .button-parent button:last-child {
-    padding: 12px 16px;
-    font-size: 1rem;
-  }
-}
-
-@media (device-height: 653px) and (device-width: 280px) {
-  .container .left {
-    width: 100%;
-    padding: 10px;
-  }
-
-  .left .navbar {
-    display: flex;
-    justify-content: space-between;
-    height: 50px;
-  }
-
-  .left .navbar .hamburger {
-    display: block;
-  }
-
-  .left .navbar .hamburger.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .left .navbar .hamburger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  .left .navbar .hamburger.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-
-  .container .left .navbar .navMenu {
-    position: fixed;
-    left: -100%;
-    top: 70px;
-    gap: 0;
-    flex-direction: column;
-    background-color: #e5edff;
-    width: 100%;
-    text-align: center;
-    transition: 0.3s;
-  }
-
-  .container .left .navbar .navMenu li {
-    margin: 10px 0;
-  }
-
-  .container .left .navbar .navMenu li a {
-    color: #6b7280;
-    display: block;
-  }
-
-  .container .left .navbar .navMenu li a.active {
-    color: #0058ff;
-  }
-
-  .container .left .navbar .navMenu.active {
-    left: 0;
-  }
-
-  .container .right,
-  .navbar ul li a {
-    display: none;
-  }
-
-  .left .body-parent {
-    margin-top: -60px;
-  }
-
-  .left .body-parent .title,
-  .left .body-parent .text-body {
-    margin-bottom: 30px;
-  }
-
-  .left .body-parent .title span:first-child {
-    font-size: 40px;
-    line-height: 40px;
-  }
-
-  .left .body-parent .title span:last-child {
-    font-size: 40px;
-    line-height: 40px;
-  }
-
-  .left .body-parent .text-body p {
-    font-size: 1rem;
-  }
-
-  .left .body-parent .button-parent button:first-child {
-    padding: 8px 6px;
-    font-size: 1rem;
-  }
-
-  .left .body-parent .button-parent button:last-child {
-    padding: 8px 6px;
-    font-size: 1rem;
-  }
-}
-
-/* ipad mini portrait */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
-  .container .left {
-    padding: 10px 20px;
-  }
-
-  .left .navbar .navMenu {
-    left: 120px;
-    gap: 30px;
-  }
-
-  .left .body-parent {
-    margin-top: -150px;
-  }
-
-  .left .body-parent .title,
-  .left .body-parent .text-body {
-    margin-bottom: 30px;
-  }
-
-  .left .body-parent .title span:first-child {
-    font-size: 80px;
-    line-height: 80px;
-  }
-
-  .left .body-parent .title span:last-child {
-    font-size: 80px;
-    line-height: 80px;
-  }
-
-  .left .body-parent .text-body p {
-    font-size: 1rem;
-  }
-
-  .left .body-parent .button-parent button:first-child {
-    padding: 12px 16px;
-    font-size: 1rem;
-  }
-
-  .left .body-parent .button-parent button:last-child {
-    padding: 12px 16px;
-    font-size: 1rem;
-  }
-}
-
-/* ipad air */
-@media only screen and (min-device-width: 829px) and (max-device-width: 1180px) and (-webkit-min-device-pixel-ratio: 1) {
-  .container .left {
-    padding: 10px 50px;
-  }
-
-  .left .body-parent {
-    margin-top: -90px;
-  }
-
-  .left .body-parent .title,
-  .left .body-parent .text-body {
-    margin-bottom: 30px;
-  }
-
-  .left .body-parent .title span:first-child {
-    font-size: 80px;
-    line-height: 80px;
-  }
-
-  .left .body-parent .title span:last-child {
-    font-size: 80px;
-    line-height: 80px;
-  }
-
-  .left .body-parent .text-body p {
-    font-size: 1rem;
-  }
-
-  .left .body-parent .button-parent button:first-child {
-    padding: 12px 16px;
-    font-size: 1rem;
-  }
-
-  .left .body-parent .button-parent button:last-child {
-    padding: 12px 16px;
-    font-size: 1rem;
   }
 }
