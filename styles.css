@@ -153,6 +153,7 @@ body {
 
   .left .navbar .hamburger {
     display: block;
+    transform: translateY(10px);
   }
 
   .left .navbar .hamburger.active .bar:nth-child(2) {
